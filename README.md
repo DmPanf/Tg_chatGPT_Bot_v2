@@ -12,21 +12,21 @@
 
 ## Description:
 
-- Imports and Setup: The code starts by importing necessary libraries and loading environment variables. It initializes OpenAI with a secret key and establishes a Yandex SpeechKit session.
+- **Imports and Setup:** The code starts by importing necessary libraries and loading environment variables. It initializes OpenAI with a secret key and establishes a Yandex SpeechKit session.
 
-- User Access: The user_allowed decorator is defined to restrict certain bot commands to a list of allowed users.
+- **User Access:** The user_allowed decorator is defined to restrict certain bot commands to a list of allowed users.
 
-- Voice and Text Mode: Users can switch between voice and text modes. The bot can reply either in text or synthesized voice, and can also recognize voice messages to convert them to text. The available voice characters for synthesis are Alena, Filipp, Jane, and Madirus.
+- **Voice and Text Mode:** Users can switch between voice and text modes. The bot can reply either in text or synthesized voice, and can also recognize voice messages to convert them to text. The available voice characters for synthesis are Alena, Filipp, Jane, and Madirus.
 
-- Commands:
- - /start: Greets the user and prompts them to ask any question.
- - /help: Provides information on how the bot can be interacted with.
- - /voice: Lets the user change settings for voice characters and the mode of interaction (voice or text).
+- **Commands:**
+  - **`/start`:** Greets the user and prompts them to ask any question.
+  - **`/help`:** Provides information on how the bot can be interacted with.
+  - **`/voice`:** Lets the user change settings for voice characters and the mode of interaction (voice or text).
 
-- Voice Recognition: If the bot is in voice mode and the user sends a voice message, the code uses Yandex SpeechKit to convert the voice message to text. This text is then processed further.
+- **Voice Recognition:** If the bot is in voice mode and the user sends a voice message, the code uses Yandex SpeechKit to convert the voice message to text. This text is then processed further.
 
-- GPT Integration: The bot sends the received text (either typed by the user or converted from voice) to GPT-3, gets a response, and either:
- - Sends the response back in text form.
- - Or synthesizes a voice message using the chosen character and sends it back to the user.
+- **GPT Integration:** The bot sends the received text (either typed by the user or converted from voice) to GPT-3, gets a response, and either:
+  - Sends the response back in text form.
+  - Or synthesizes a voice message using the chosen character and sends it back to the user.
 
-- Main Loop: In the main() function, the bot's handlers are added to the application and the bot starts listening for incoming messages and commands.
+- **Main Loop:** In the main() function, the bot's handlers are added to the application and the bot starts listening for incoming messages and commands.
